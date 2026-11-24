@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dhananjaya Senadheera</title>
+<meta name="description" content="Dhananjaya Senadheera: Co-Founder of BloomX Analytica and software engineer. .NET Core, Azure, microservices and AI-integrated products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: calm, confident engineer-founder; few words, exact facts.
+   IDEA: a system architecture diagram: nodes and links, the way DJ thinks.
+   PICTURE: headshot as the central node of a live service network.
+   COLOUR and TYPE: dark slate ground, teal accent (matches cover and headshots); Space Grotesk + Inter.
+   LAYOUT: hero composition, then full-width bands to the footer. */
+:root{color-scheme:dark;--bg:#1b2128;--bg2:#222932;--card:#262e38;--line:#36414d;--ink:#e9eef3;--muted:#aab6c2;--accent:#4fb3cf;--accent2:#1f3a44}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:clamp(30px,4vw,44px);margin-bottom:28px}
+h3{font-size:20px;line-height:1.25}
+p{margin:0 0 14px;max-width:68ch}
+a{color:var(--accent)}a:hover{color:#8fd6ea}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto}
+.band{padding:clamp(48px,7vw,96px) max(5vw,16px)}
+.alt{background:var(--bg2)}
+/* nav */
+header{position:sticky;top:0;z-index:10;background:rgba(27,33,40,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;gap:8px 24px;flex-wrap:wrap;padding:12px max(5vw,16px);max-width:1280px;margin:0 auto}
+.logo{font:700 20px "Space Grotesk",sans-serif;color:var(--ink);text-decoration:none;margin-right:auto;padding:8px 0}
+.logo span{color:var(--accent)}
+nav .links{display:flex;gap:4px 18px;flex-wrap:wrap}
+nav .links a{color:var(--muted);text-decoration:none;font-size:15px;padding:10px 2px}
+nav .links a:hover{color:var(--ink)}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(40px,6vw,64px);margin:6px 0 18px}
+.role{font-size:18px;color:var(--muted);margin-bottom:8px}
+.lead{font-size:19px;color:#cfd8e1;margin-bottom:28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 20px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--line);color:var(--ink);background:var(--card)}
+.btn:hover{border-color:var(--accent);color:var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#0f2a33}
+.btn.primary:hover{background:#7ccbe0;color:#0f2a33}
+.btn svg{width:18px;height:18px}
+.pic{position:relative;aspect-ratio:1/1;width:100%;max-width:520px;justify-self:center}
+.pic svg{position:absolute;inset:0;width:100%;height:100%}
+.pic img{position:absolute;left:18%;top:18%;width:64%;height:64%;object-fit:cover;border-radius:50%;border:3px solid var(--accent);box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.pulse{animation:pulse 3.2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+@media(prefers-reduced-motion:reduce){.pulse{animation:none}html{scroll-behavior:auto}}
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:40px}
+.facts{display:grid;gap:12px;align-content:start}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.fact b{display:block;font:600 26px "Space Grotesk",sans-serif;color:var(--ink)}
+.fact span{color:var(--muted);font-size:14px}
+/* experience */
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 32px 28px}
+.timeline li::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg2);border:2px solid var(--accent)}
+.timeline li.now::before{background:var(--accent)}
+.when{font-size:14px;color:var(--muted);white-space:nowrap}
+.org{color:var(--accent);font-weight:600}
+.timeline p{color:#cfd8e1;margin:8px 0 0}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:999px;background:var(--accent2);color:#bfeaf5;margin-left:8px;vertical-align:middle}
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.card .ico{width:44px;height:44px;border-radius:12px;background:var(--accent2);display:grid;place-items:center}
+.card .ico svg{width:24px;height:24px;stroke:var(--accent)}
+.card p{color:#cfd8e1;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.chip{font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid var(--line);color:#dce3ea;background:#1f262e;white-space:nowrap}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px}
+.skills h3{font-size:17px;margin-bottom:12px;color:var(--ink)}
+/* education */
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px}
+.edu .card h3{margin-bottom:2px}
+.edu .when{display:block;margin-bottom:6px}
+/* contact */
+.contact{text-align:center}
+.contact p{margin:0 auto 26px;color:#cfd8e1}
+.contact .btns{justify-content:center}
+.mail{margin-top:18px;color:var(--muted);font-size:15px}
+footer{border-top:1px solid var(--line);padding:24px max(5vw,16px);color:var(--muted);font-size:14px;text-align:center}
+@media(max-width:860px){.hero,.about{grid-template-columns:minmax(0,1fr)}.pic{max-width:380px;order:-1}}
+@media(max-width:600px){.lead{font-size:17px}.timeline li{padding-left:22px}.tag{margin-left:0;margin-top:4px}}
+</style>
+</head>
+<body>
+<header>
+<nav aria-label="Main">
+<a class="logo" href="#top">DJ<span>.</span></a>
+<div class="links">
+<a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+
+<main id="top">
+<section class="band">
+<div class="wrap hero">
+<div>
+<p class="role">Co-Founder @ BloomX Analytica · Software Engineer</p>
+<h1>Dhananjaya Senadheera</h1>
+<p class="lead">I turn AI ideas into scalable products. Five years of building cloud software with .NET Core and Azure, now building trusted, AI-integrated products from the ground up.</p>
+<div class="btns">
+<a class="btn primary" href="#contact">Get in touch</a>
+<a class="btn" href="https://www.linkedin.com/in/dhananjaya-senadheera/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.5V21h-4v-5.8c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.5-2.25 3.1V21H9z"/></svg>LinkedIn</a>
+<a class="btn" href="https://github.com/DhananjayaSenadheera" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</a>
+</div>
+</div>
+<div class="pic" role="img" aria-label="Portrait of Dhananjaya at the centre of a network of connected services">
+<svg viewBox="0 0 400 400" aria-hidden="true">
+<g stroke="#4fb3cf" stroke-opacity=".35" stroke-width="1.5" fill="none">
+<path d="M200 200 L40 70 M200 200 L360 60 M200 200 L380 250 M200 200 L300 380 M200 200 L70 360 M200 200 L20 220"/>
+<path d="M40 70 L120 20 M360 60 L300 10 M380 250 L395 330 M70 360 L150 395 M20 220 L10 300"/>
+</g>
+<g fill="#4fb3cf">
+<circle class="pulse" cx="40" cy="70" r="7"/><circle cx="360" cy="60" r="6"/><circle class="pulse" cx="380" cy="250" r="8" style="animation-delay:1s"/>
+<circle cx="300" cy="380" r="6"/><circle class="pulse" cx="70" cy="360" r="7" style="animation-delay:2s"/><circle cx="20" cy="220" r="5"/>
+<circle cx="120" cy="20" r="4" fill-opacity=".6"/><circle cx="300" cy="10" r="4" fill-opacity=".6"/><circle cx="395" cy="330" r="4" fill-opacity=".6"/><circle cx="150" cy="395" r="4" fill-opacity=".6"/><circle cx="10" cy="300" r="4" fill-opacity=".6"/>
+</g>
+</svg>
+<img src="profile.jpg" alt="Dhananjaya Senadheera" width="720" height="720">
+</div>
+</div>
+</section>
+
+<section class="band alt" id="about">
+<div class="wrap about">
+<div>
+<h2>About</h2>
+<p>I'm a software engineer and co-founder of BloomX Analytica, where we build trusted, privacy-first AI for businesses. We focus on AI-integrated products that solve real industry problems, designed from day one to scale.</p>
+<p>Before BloomX, I spent over five years building web applications and cloud systems with .NET Core, C#, React.js and Microsoft Azure. I specialise in microservices, using RabbitMQ for messaging, Docker for deployment and SQL Server for data. A highlight was my time at SPIL Labs, an Australian software company, building solutions for glass-industry clients around the world.</p>
+<p>I care about practical, responsible AI: software where AI makes people faster and better informed, but humans stay in control. Outside client work, I'm drawn to IoT, automation and technology that makes the world a little greener.</p>
+</div>
+<div class="facts">
+<div class="fact"><b>5+ years</b><span>building commercial software</span></div>
+<div class="fact"><b>.NET Core &amp; Azure</b><span>core stack, from API to cloud</span></div>
+<div class="fact"><b>MSc Computer Science</b><span>York St John University</span></div>
+</div>
+</div>
+</section>
+
+<section class="band" id="experience">
+<div class="wrap">
+<h2>Experience</h2>
+<ol class="timeline">
+<li class="now"><h3>Co-Founder &amp; Software Engineer <span class="tag">Current</span></h3><div><span class="org">BloomX Analytica</span> · <span class="when">Oct 2026 – Present</span></div><p>Co-founded a UK company building private, compliant AI solutions for European enterprises and SMEs, including AI applications, custom models and AI R&amp;D.</p></li>
+<li><h3>Software Engineer (Freelance)</h3><div><span class="org">Self-employed</span> · <span class="when">Sep 2025 – Sep 2026</span></div><p>Delivered software for clients with .NET Core, C#, React.js and Azure, from requirements through to deployment: APIs, web applications and cloud infrastructure.</p></li>
+<li><h3>Software Engineer</h3><div><span class="org">Code Works</span> · <span class="when">Aug 2021 – May 2023</span></div><p>Built scalable applications with .NET Core Web API, React.js and MVC, deployed on Azure with JWT and Azure AD B2C authentication. Delivered warehouse, inventory and school management systems using clean architecture.</p></li>
+<li><h3>Software Engineer</h3><div><span class="org">PBSS Group</span> · <span class="when">Mar 2021 – Jul 2021</span></div><p>Developed web applications with ASP.NET Web Forms and C#, and maintained a school management system.</p></li>
+<li><h3>Software Engineer</h3><div><span class="org">SPIL Labs, Australia</span> · <span class="when">Jul 2019 – Mar 2021</span></div><p>Built software for glass-industry clients worldwide with ASP.NET Core, Entity Framework and Azure DevOps, working directly with customers across time zones.</p></li>
+<li><h3>Software Engineer</h3><div><span class="org">ION Groups</span> · <span class="when">Jan 2018 – Jun 2019</span></div><p>Developed web applications with PHP, JavaScript and Bootstrap, and worked with SAGE accounting products.</p></li>
+</ol>
+</div>
+</section>
+
+<section class="band alt" id="projects">
+<div class="wrap">
+<h2>Selected projects</h2>
+<div class="grid">
+<article class="card">
+<div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10z"/><path d="M12 21v-8"/></svg></div>
+<h3>AI-powered ESG scoring platform</h3>
+<p>An AI agent built on the Claude Agent SDK that scores companies on environmental, social and governance performance. A configurable scoring engine does the maths; the agent explains the results in plain English.</p>
+<div class="chips"><span class="chip">Python</span><span class="chip">Claude Agent SDK</span><span class="chip">ESG analytics</span></div>
+</article>
+<article class="card">
+<div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/></svg></div>
+<h3>IoT greenhouse automation</h3>
+<p>MSc project: an IoT system that collects sensor data in real time and automates the growing environment, built as microservices on Azure.</p>
+<div class="chips"><span class="chip">.NET Core</span><span class="chip">Azure</span><span class="chip">Microservices</span><span class="chip">IoT</span></div>
+</article>
+<article class="card">
+<div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/></svg></div>
+<h3>Warehouse &amp; inventory systems</h3>
+<p>At Code Works: an automated warehouse management system and real-time inventory monitoring, with secure sign-in and Azure hosting.</p>
+<div class="chips"><span class="chip">ASP.NET Core</span><span class="chip">React.js</span><span class="chip">Azure AD B2C</span></div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="band" id="skills">
+<div class="wrap">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Backend &amp; cloud</h3><div class="chips"><span class="chip">.NET Core</span><span class="chip">C#</span><span class="chip">ASP.NET Core Web API</span><span class="chip">Microsoft Azure</span><span class="chip">SQL Server</span></div></div>
+<div><h3>Architecture</h3><div class="chips"><span class="chip">Microservices</span><span class="chip">RabbitMQ</span><span class="chip">Docker</span><span class="chip">Clean Architecture</span></div></div>
+<div><h3>AI</h3><div class="chips"><span class="chip">Agentic AI development</span><span class="chip">AI integration</span><span class="chip">ESG analytics</span></div></div>
+<div><h3>Frontend &amp; tools</h3><div class="chips"><span class="chip">React.js</span><span class="chip">JavaScript</span><span class="chip">Git</span><span class="chip">Azure DevOps</span><span class="chip">Agile</span></div></div>
+</div>
+</div>
+</section>
+
+<section class="band alt" id="education">
+<div class="wrap">
+<h2>Education</h2>
+<div class="edu">
+<div class="card"><h3>MSc Computer Science</h3><span class="when">York St John University · 2023 – 2025</span><p>Final project: IoT-based greenhouse automation with .NET Core, Azure and microservices.</p></div>
+<div class="card"><h3>BSc (Hons) Software Engineering</h3><span class="when">University of Plymouth · 2014 – 2017</span><p>Delivered in partnership with NSBM Green University, Sri Lanka.</p></div>
+</div>
+</div>
+</section>
+
+<section class="band" id="contact">
+<div class="wrap contact">
+<h2>Let's build something</h2>
+<p>Open to conversations about AI products, cloud architecture, .NET, or working together.</p>
+<div class="btns">
+<a class="btn primary" href="mailto:dpsprabath@gmail.com">Email me</a>
+<a class="btn" href="https://www.linkedin.com/in/dhananjaya-senadheera/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/DhananjayaSenadheera" target="_blank" rel="noopener">GitHub</a>
+</div>
+<p class="mail">dpsprabath@gmail.com</p>
+</div>
+</section>
+</main>
+
+<footer>© 2026 Dhananjaya Senadheera · Exeter, United Kingdom</footer>
+</body>
+</html>
